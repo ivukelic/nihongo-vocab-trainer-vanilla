@@ -1,0 +1,518 @@
+[
+  {
+    "kanji": "安心",
+    "kana": "あんしん",
+    "romaji": "anshin",
+    "english": "relief; peace of mind"
+  },
+  {
+    "kanji": "案内",
+    "kana": "あんない",
+    "romaji": "annai",
+    "english": "guidance; information"
+  },
+  {
+    "kanji": "以下",
+    "kana": "いか",
+    "romaji": "ika",
+    "english": "below; less than"
+  },
+  { "kanji": "医者", "kana": "いしゃ", "romaji": "isha", "english": "doctor" },
+  {
+    "kanji": "急",
+    "kana": "いそぎ",
+    "romaji": "isogi",
+    "english": "haste; emergency"
+  },
+  { "kanji": "以内", "kana": "いない", "romaji": "inai", "english": "within" },
+  {
+    "kanji": "以上",
+    "kana": "いじょう",
+    "romaji": "ijou",
+    "english": "more than; above"
+  },
+  {
+    "kanji": "以外",
+    "kana": "いがい",
+    "romaji": "igai",
+    "english": "except; besides"
+  },
+  {
+    "kanji": "田舎",
+    "kana": "いなか",
+    "romaji": "inaka",
+    "english": "countryside"
+  },
+  {
+    "kanji": "受付",
+    "kana": "うけつけ",
+    "romaji": "uketsuke",
+    "english": "reception desk"
+  },
+  {
+    "kanji": "運転手",
+    "kana": "うんてんしゅ",
+    "romaji": "untenshu",
+    "english": "driver"
+  },
+  {
+    "kanji": "運動",
+    "kana": "うんどう",
+    "romaji": "undou",
+    "english": "exercise; movement"
+  },
+  {
+    "kanji": "絵画",
+    "kana": "かいが",
+    "romaji": "kaiga",
+    "english": "painting"
+  },
+  {
+    "kanji": "会場",
+    "kana": "かいじょう",
+    "romaji": "kaijou",
+    "english": "venue"
+  },
+  {
+    "kanji": "会話",
+    "kana": "かいわ",
+    "romaji": "kaiwa",
+    "english": "conversation"
+  },
+  {
+    "kanji": "帰り",
+    "kana": "かえり",
+    "romaji": "kaeri",
+    "english": "return; coming back"
+  },
+  {
+    "kanji": "科学",
+    "kana": "かがく",
+    "romaji": "kagaku",
+    "english": "science"
+  },
+  { "kanji": "鏡", "kana": "かがみ", "romaji": "kagami", "english": "mirror" },
+  {
+    "kanji": "火事",
+    "kana": "かじ",
+    "romaji": "kaji",
+    "english": "fire; disaster"
+  },
+  {
+    "kanji": "家内",
+    "kana": "かない",
+    "romaji": "kanai",
+    "english": "(my) wife"
+  },
+  { "kanji": "風", "kana": "かぜ", "romaji": "kaze", "english": "wind" },
+  {
+    "kanji": "看護師",
+    "kana": "かんごし",
+    "romaji": "kangoshi",
+    "english": "nurse"
+  },
+  {
+    "kanji": "会議",
+    "kana": "かいぎ",
+    "romaji": "kaigi",
+    "english": "meeting"
+  },
+  {
+    "kanji": "会議室",
+    "kana": "かいぎしつ",
+    "romaji": "kaigishitsu",
+    "english": "conference room"
+  },
+  {
+    "kanji": "関係",
+    "kana": "かんけい",
+    "romaji": "kankei",
+    "english": "relation; connection"
+  },
+  { "kanji": "危険", "kana": "きけん", "romaji": "kiken", "english": "danger" },
+  {
+    "kanji": "汽車",
+    "kana": "きしゃ",
+    "romaji": "kisha",
+    "english": "train (steam)"
+  },
+  {
+    "kanji": "技術",
+    "kana": "ぎじゅつ",
+    "romaji": "gijutsu",
+    "english": "technology; skill"
+  },
+  {
+    "kanji": "急行",
+    "kana": "きゅうこう",
+    "romaji": "kyuukou",
+    "english": "express train"
+  },
+  {
+    "kanji": "客",
+    "kana": "きゃく",
+    "romaji": "kyaku",
+    "english": "guest; customer"
+  },
+  {
+    "kanji": "教育",
+    "kana": "きょういく",
+    "romaji": "kyouiku",
+    "english": "education"
+  },
+  {
+    "kanji": "興味",
+    "kana": "きょうみ",
+    "romaji": "kyoumi",
+    "english": "interest"
+  },
+  {
+    "kanji": "近所",
+    "kana": "きんじょ",
+    "romaji": "kinjo",
+    "english": "neighborhood"
+  },
+  { "kanji": "空気", "kana": "くうき", "romaji": "kuuki", "english": "air" },
+  {
+    "kanji": "空港",
+    "kana": "くうこう",
+    "romaji": "kuukou",
+    "english": "airport"
+  },
+  {
+    "kanji": "首相",
+    "kana": "しゅしょう",
+    "romaji": "shushou",
+    "english": "prime minister"
+  },
+  {
+    "kanji": "係",
+    "kana": "かかり",
+    "romaji": "kakari",
+    "english": "person in charge"
+  },
+  {
+    "kanji": "会費",
+    "kana": "かいひ",
+    "romaji": "kaihi",
+    "english": "membership fee"
+  },
+  {
+    "kanji": "講義",
+    "kana": "こうぎ",
+    "romaji": "kougi",
+    "english": "lecture"
+  },
+  {
+    "kanji": "講師",
+    "kana": "こうし",
+    "romaji": "koushi",
+    "english": "lecturer"
+  },
+  {
+    "kanji": "工場",
+    "kana": "こうじょう",
+    "romaji": "koujou",
+    "english": "factory"
+  },
+  {
+    "kanji": "郊外",
+    "kana": "こうがい",
+    "romaji": "kougai",
+    "english": "suburbs"
+  },
+  {
+    "kanji": "交通",
+    "kana": "こうつう",
+    "romaji": "koutsuu",
+    "english": "traffic"
+  },
+  {
+    "kanji": "国際",
+    "kana": "こくさい",
+    "romaji": "kokusai",
+    "english": "international"
+  },
+  {
+    "kanji": "故障",
+    "kana": "こしょう",
+    "romaji": "koshou",
+    "english": "malfunction; breakdown"
+  },
+  {
+    "kanji": "小説",
+    "kana": "しょうせつ",
+    "romaji": "shousetsu",
+    "english": "novel"
+  },
+  {
+    "kanji": "商店",
+    "kana": "しょうてん",
+    "romaji": "shouten",
+    "english": "store; shop"
+  },
+  {
+    "kanji": "食事",
+    "kana": "しょくじ",
+    "romaji": "shokuji",
+    "english": "meal"
+  },
+  {
+    "kanji": "食料品",
+    "kana": "しょくりょうひん",
+    "romaji": "shokuryouhin",
+    "english": "groceries"
+  },
+  {
+    "kanji": "心",
+    "kana": "こころ",
+    "romaji": "kokoro",
+    "english": "heart; mind"
+  },
+  {
+    "kanji": "市役所",
+    "kana": "しやくしょ",
+    "romaji": "shiyakusho",
+    "english": "city hall"
+  },
+  {
+    "kanji": "社会",
+    "kana": "しゃかい",
+    "romaji": "shakai",
+    "english": "society"
+  },
+  {
+    "kanji": "社員",
+    "kana": "しゃいん",
+    "romaji": "shain",
+    "english": "employee"
+  },
+  {
+    "kanji": "習慣",
+    "kana": "しゅうかん",
+    "romaji": "shuukan",
+    "english": "habit; custom"
+  },
+  {
+    "kanji": "主人",
+    "kana": "しゅじん",
+    "romaji": "shujin",
+    "english": "husband; master"
+  },
+  {
+    "kanji": "紹介",
+    "kana": "しょうかい",
+    "romaji": "shoukai",
+    "english": "introduction"
+  },
+  {
+    "kanji": "生活",
+    "kana": "せいかつ",
+    "romaji": "seikatsu",
+    "english": "life; living"
+  },
+  {
+    "kanji": "生徒",
+    "kana": "せいと",
+    "romaji": "seito",
+    "english": "student"
+  },
+  {
+    "kanji": "政治",
+    "kana": "せいじ",
+    "romaji": "seiji",
+    "english": "politics"
+  },
+  { "kanji": "世界", "kana": "せかい", "romaji": "sekai", "english": "world" },
+  {
+    "kanji": "説明",
+    "kana": "せつめい",
+    "romaji": "setsumei",
+    "english": "explanation"
+  },
+  {
+    "kanji": "選手",
+    "kana": "せんしゅ",
+    "romaji": "senshu",
+    "english": "athlete; player"
+  },
+  {
+    "kanji": "相談",
+    "kana": "そうだん",
+    "romaji": "soudan",
+    "english": "consultation"
+  },
+  {
+    "kanji": "卒業",
+    "kana": "そつぎょう",
+    "romaji": "sotsugyou",
+    "english": "graduation"
+  },
+  {
+    "kanji": "建物",
+    "kana": "たてもの",
+    "romaji": "tatemono",
+    "english": "building"
+  },
+  {
+    "kanji": "旅館",
+    "kana": "りょかん",
+    "romaji": "ryokan",
+    "english": "Japanese inn"
+  },
+  {
+    "kanji": "大会",
+    "kana": "たいかい",
+    "romaji": "taikai",
+    "english": "tournament"
+  },
+  {
+    "kanji": "大使館",
+    "kana": "たいしかん",
+    "romaji": "taishikan",
+    "english": "embassy"
+  },
+  {
+    "kanji": "台風",
+    "kana": "たいふう",
+    "romaji": "taifuu",
+    "english": "typhoon"
+  },
+  {
+    "kanji": "力",
+    "kana": "ちから",
+    "romaji": "chikara",
+    "english": "strength; power"
+  },
+  {
+    "kanji": "注意",
+    "kana": "ちゅうい",
+    "romaji": "chuui",
+    "english": "caution; attention"
+  },
+  {
+    "kanji": "途中",
+    "kana": "とちゅう",
+    "romaji": "tochuu",
+    "english": "on the way; in the middle"
+  },
+  {
+    "kanji": "特急",
+    "kana": "とっきゅう",
+    "romaji": "tokkyuu",
+    "english": "limited express train"
+  },
+  {
+    "kanji": "場合",
+    "kana": "ばあい",
+    "romaji": "baai",
+    "english": "case; situation"
+  },
+  {
+    "kanji": "林",
+    "kana": "はやし",
+    "romaji": "hayashi",
+    "english": "woods; forest"
+  },
+  {
+    "kanji": "反対",
+    "kana": "はんたい",
+    "romaji": "hantai",
+    "english": "opposition"
+  },
+  { "kanji": "日記", "kana": "にっき", "romaji": "nikki", "english": "diary" },
+  {
+    "kanji": "入学",
+    "kana": "にゅうがく",
+    "romaji": "nyuugaku",
+    "english": "school entrance"
+  },
+  {
+    "kanji": "入院",
+    "kana": "にゅういん",
+    "romaji": "nyuuin",
+    "english": "hospitalization"
+  },
+  {
+    "kanji": "発表",
+    "kana": "はっぴょう",
+    "romaji": "happyou",
+    "english": "presentation"
+  },
+  {
+    "kanji": "秘密",
+    "kana": "ひみつ",
+    "romaji": "himitsu",
+    "english": "secret"
+  },
+  {
+    "kanji": "美術館",
+    "kana": "びじゅつかん",
+    "romaji": "bijutsukan",
+    "english": "art museum"
+  },
+  { "kanji": "返事", "kana": "へんじ", "romaji": "henji", "english": "reply" },
+  {
+    "kanji": "文化",
+    "kana": "ぶんか",
+    "romaji": "bunka",
+    "english": "culture"
+  },
+  {
+    "kanji": "文章",
+    "kana": "ぶんしょう",
+    "romaji": "bunshou",
+    "english": "sentence; text"
+  },
+  {
+    "kanji": "部長",
+    "kana": "ぶちょう",
+    "romaji": "buchou",
+    "english": "department manager"
+  },
+  {
+    "kanji": "翻訳",
+    "kana": "ほんやく",
+    "romaji": "honyaku",
+    "english": "translation"
+  },
+  {
+    "kanji": "周り",
+    "kana": "まわり",
+    "romaji": "mawari",
+    "english": "around; surroundings"
+  },
+  { "kanji": "未来", "kana": "みらい", "romaji": "mirai", "english": "future" },
+  {
+    "kanji": "向こう",
+    "kana": "むこう",
+    "romaji": "mukou",
+    "english": "opposite side"
+  },
+  {
+    "kanji": "予約",
+    "kana": "よやく",
+    "romaji": "yoyaku",
+    "english": "reservation"
+  },
+  { "kanji": "用事", "kana": "ようじ", "romaji": "youji", "english": "errand" },
+  {
+    "kanji": "用意",
+    "kana": "ようい",
+    "romaji": "youi",
+    "english": "preparation"
+  },
+  { "kanji": "理由", "kana": "りゆう", "romaji": "riyuu", "english": "reason" },
+  {
+    "kanji": "留守",
+    "kana": "るす",
+    "romaji": "rusu",
+    "english": "being away from home"
+  },
+  {
+    "kanji": "歴史",
+    "kana": "れきし",
+    "romaji": "rekishi",
+    "english": "history"
+  }
+]

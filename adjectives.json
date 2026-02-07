@@ -1,0 +1,241 @@
+[
+  {
+    "kanji": "安全",
+    "kana": "あんぜん",
+    "romaji": "anzen",
+    "english": "safe",
+    "type": "na"
+  },
+  {
+    "kanji": "案外",
+    "kana": "あんがい",
+    "romaji": "angai",
+    "english": "unexpected; surprising",
+    "type": "na"
+  },
+  {
+    "kanji": "必要",
+    "kana": "ひつよう",
+    "romaji": "hitsuyou",
+    "english": "necessary",
+    "type": "na"
+  },
+  {
+    "kanji": "不便",
+    "kana": "ふべん",
+    "romaji": "fuben",
+    "english": "inconvenient",
+    "type": "na"
+  },
+  {
+    "kanji": "自由",
+    "kana": "じゆう",
+    "romaji": "jiyuu",
+    "english": "free",
+    "type": "na"
+  },
+  {
+    "kanji": "盛ん",
+    "kana": "さかん",
+    "romaji": "sakan",
+    "english": "prosperous; active",
+    "type": "na"
+  },
+  {
+    "kanji": "十分",
+    "kana": "じゅうぶん",
+    "romaji": "juubun",
+    "english": "enough; sufficient",
+    "type": "na"
+  },
+  {
+    "kanji": "大事",
+    "kana": "だいじ",
+    "romaji": "daiji",
+    "english": "important",
+    "type": "na"
+  },
+  {
+    "kanji": "大切",
+    "kana": "たいせつ",
+    "romaji": "taisetsu",
+    "english": "precious; important",
+    "type": "na"
+  },
+  {
+    "kanji": "特別",
+    "kana": "とくべつ",
+    "romaji": "tokubetsu",
+    "english": "special",
+    "type": "na"
+  },
+  {
+    "kanji": "複雑",
+    "kana": "ふくざつ",
+    "romaji": "fukuzatsu",
+    "english": "complex",
+    "type": "na"
+  },
+  {
+    "kanji": "まじめ",
+    "kana": "まじめ",
+    "romaji": "majime",
+    "english": "serious; earnest",
+    "type": "na"
+  },
+  {
+    "kanji": "無理",
+    "kana": "むり",
+    "romaji": "muri",
+    "english": "impossible; unreasonable",
+    "type": "na"
+  },
+  {
+    "kanji": "真面目",
+    "kana": "まじめ",
+    "romaji": "majime",
+    "english": "serious; diligent",
+    "type": "na"
+  },
+  {
+    "kanji": "盛大",
+    "kana": "せいだい",
+    "romaji": "seidai",
+    "english": "grand; magnificent",
+    "type": "na"
+  },
+
+  {
+    "kanji": "厚い",
+    "kana": "あつい",
+    "romaji": "atsui",
+    "english": "thick; deep",
+    "type": "i"
+  },
+  {
+    "kanji": "浅い",
+    "kana": "あさい",
+    "romaji": "asai",
+    "english": "shallow",
+    "type": "i"
+  },
+  {
+    "kanji": "危ない",
+    "kana": "あぶない",
+    "romaji": "abunai",
+    "english": "dangerous",
+    "type": "i"
+  },
+  {
+    "kanji": "細かい",
+    "kana": "こまかい",
+    "romaji": "komakai",
+    "english": "detailed; fine",
+    "type": "i"
+  },
+  {
+    "kanji": "寂しい",
+    "kana": "さびしい",
+    "romaji": "sabishii",
+    "english": "lonely",
+    "type": "i"
+  },
+  {
+    "kanji": "素晴らしい",
+    "kana": "すばらしい",
+    "romaji": "subarashii",
+    "english": "wonderful",
+    "type": "i"
+  },
+  {
+    "kanji": "すごい",
+    "kana": "すごい",
+    "romaji": "sugoi",
+    "english": "amazing; great",
+    "type": "i"
+  },
+  {
+    "kanji": "正しい",
+    "kana": "ただしい",
+    "romaji": "tadashii",
+    "english": "correct",
+    "type": "i"
+  },
+  {
+    "kanji": "珍しい",
+    "kana": "めずらしい",
+    "romaji": "mezurashii",
+    "english": "rare; unusual",
+    "type": "i"
+  },
+  {
+    "kanji": "難しい",
+    "kana": "むずかしい",
+    "romaji": "muzukashii",
+    "english": "difficult (N4 sense: grammars/tasks)",
+    "type": "i"
+  },
+  {
+    "kanji": "易しい",
+    "kana": "やさしい",
+    "romaji": "yasashii",
+    "english": "easy; gentle (N4 usage for difficulty)",
+    "type": "i"
+  },
+  {
+    "kanji": "柔らかい",
+    "kana": "やわらかい",
+    "romaji": "yawarakai",
+    "english": "soft",
+    "type": "i"
+  },
+  {
+    "kanji": "詳しい",
+    "kana": "くわしい",
+    "romaji": "kuwashii",
+    "english": "detailed",
+    "type": "i"
+  },
+  {
+    "kanji": "恥ずかしい",
+    "kana": "はずかしい",
+    "romaji": "hazukashii",
+    "english": "embarrassing; shy",
+    "type": "i"
+  },
+  {
+    "kanji": "珍しい",
+    "kana": "めずらしい",
+    "romaji": "mezurashii",
+    "english": "rare",
+    "type": "i"
+  },
+  {
+    "kanji": "眠い",
+    "kana": "ねむい",
+    "romaji": "nemui",
+    "english": "sleepy",
+    "type": "i"
+  },
+  {
+    "kanji": "濃い",
+    "kana": "こい",
+    "romaji": "koi",
+    "english": "strong (flavor); dense",
+    "type": "i"
+  },
+  {
+    "kanji": "薄い",
+    "kana": "うすい",
+    "romaji": "usui",
+    "english": "thin; weak (taste)",
+    "type": "i"
+  },
+  {
+    "kanji": "偉い",
+    "kana": "えらい",
+    "romaji": "erai",
+    "english": "great; admirable",
+    "type": "i"
+  }
+]
