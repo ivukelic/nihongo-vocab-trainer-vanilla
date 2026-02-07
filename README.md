@@ -1,0 +1,1 @@
+# nihongo-vocab-trainer-vanilla
