@@ -55,6 +55,11 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+/* TODO think how to handle when choice is already selected */
+/* button:disabled {
+  cursor: default;
+  border: unset;
+} */
 
 .correct {
   border: 1px solid greenyellow;
@@ -79,4 +84,11 @@ button:focus-visible {
 .incorrect:hover {
   border: 1px solid red;
   box-shadow: 0 0px 10px 0 red;
+}
+
+.optionContainer {
+  padding-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
 }

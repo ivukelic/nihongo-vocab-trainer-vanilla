@@ -53,8 +53,8 @@ async function loadOptions(data) {
 function render() {
   document.querySelector("#app").innerHTML = `
   <div id="app">
-  <div className="main word">${givenWord?.kana ?? ""}</div>
-   <div>
+  <div class="mainWord">${givenWord?.kana ?? ""}</div>
+   <div class="optionContainer">
       ${options
         .map((option, index) => {
           return `<button data-index="${index}" id="${option.romaji}">
