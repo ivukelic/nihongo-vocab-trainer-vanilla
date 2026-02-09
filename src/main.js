@@ -1,46 +1,13 @@
 import "./style.css";
 
-let nouns;
-let verbs;
-let adjectives;
 let givenWord;
 let options = [];
 let points = 0;
+let data;
 
-main();
-
-async function main() {
-  await loadNouns();
-  await loadAdjectives();
-  await loadVerbs();
-
-  await loadOptions(adjectives);
-
-  render();
-  Router.add("/", () => {
-    render();
-  });
-
-  Router.add("/myquiz/:level", ({ level }) => {
-    loadQuiz(level);
-  });
-
-  Router.start();
-}
-
-async function loadNouns() {
-  const response = await fetch("/nouns.json");
-  nouns = await response.json();
-}
-
-async function loadAdjectives() {
-  const response = await fetch("/adjectives.json");
-  adjectives = await response.json();
-}
-
-async function loadVerbs() {
-  const response = await fetch("/verbs.json");
-  verbs = await response.json();
+async function loadData(level) {
+  const response = await fetch(`/${level}.json`);
+  data = await response.json();
 }
 
 function shuffle(arr) {
@@ -63,11 +30,11 @@ function render() {
   document.querySelector("#app").innerHTML = `
   <div id="app">
     <div class="buttonContainer">
-      <button data-level="n5">N5</button>
-      <button data-level="n4">N4</button>
-      <button data-level="n3">N3</button>
-      <button data-level="n2">N2</button>
-      <button data-level="n1">N1</button>
+      <button data-level="nN">N5</button>
+      <button data-level="N4">N4</button>
+      <button data-level="N3">N3</button>
+      <button data-level="N2">N2</button>
+      <button data-level="N1">N1</button>
     </div>
   </div>
 `;
@@ -168,3 +135,25 @@ const Router = (() => {
 
   return { add, go, start };
 })();
+
+async function main() {
+  render();
+
+  Router.add("/", () => {
+    render();
+  });
+
+  Router.add("/myquiz/:level", ({ level }) => {
+    prepareQuiz(level);
+  });
+
+  Router.start();
+}
+
+async function prepareQuiz(level) {
+  await loadData(level);
+  await loadOptions(data);
+  await loadQuiz(level);
+}
+
+main();

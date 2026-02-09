@@ -1,0 +1,1168 @@
+[
+  { "kanji": "理由", "kana": "りゆう", "romaji": "riyuu", "english": "reason" },
+  { "kanji": "結果", "kana": "けっか", "romaji": "kekka", "english": "result" },
+  {
+    "kanji": "原因",
+    "kana": "げんいん",
+    "romaji": "genin",
+    "english": "cause"
+  },
+  {
+    "kanji": "場合",
+    "kana": "ばあい",
+    "romaji": "baai",
+    "english": "case; situation"
+  },
+  {
+    "kanji": "経験",
+    "kana": "けいけん",
+    "romaji": "keiken",
+    "english": "experience"
+  },
+
+  {
+    "kanji": "予定",
+    "kana": "よてい",
+    "romaji": "yotei",
+    "english": "plan; schedule"
+  },
+  {
+    "kanji": "約束",
+    "kana": "やくそく",
+    "romaji": "yakusoku",
+    "english": "promise; appointment"
+  },
+  {
+    "kanji": "準備",
+    "kana": "じゅんび",
+    "romaji": "junbi",
+    "english": "preparation"
+  },
+  {
+    "kanji": "会議",
+    "kana": "かいぎ",
+    "romaji": "kaigi",
+    "english": "meeting"
+  },
+  {
+    "kanji": "連絡",
+    "kana": "れんらく",
+    "romaji": "renraku",
+    "english": "contact; communication"
+  },
+
+  {
+    "kanji": "関係",
+    "kana": "かんけい",
+    "romaji": "kankei",
+    "english": "relationship"
+  },
+  {
+    "kanji": "態度",
+    "kana": "たいど",
+    "romaji": "taido",
+    "english": "attitude"
+  },
+  { "kanji": "意見", "kana": "いけん", "romaji": "iken", "english": "opinion" },
+  {
+    "kanji": "考え",
+    "kana": "かんがえ",
+    "romaji": "kangae",
+    "english": "thought; idea"
+  },
+  {
+    "kanji": "判断",
+    "kana": "はんだん",
+    "romaji": "handan",
+    "english": "judgment; decision"
+  },
+
+  {
+    "kanji": "努力",
+    "kana": "どりょく",
+    "romaji": "doryoku",
+    "english": "effort"
+  },
+  {
+    "kanji": "成功",
+    "kana": "せいこう",
+    "romaji": "seikou",
+    "english": "success"
+  },
+  {
+    "kanji": "失敗",
+    "kana": "しっぱい",
+    "romaji": "shippai",
+    "english": "failure"
+  },
+  { "kanji": "危険", "kana": "きけん", "romaji": "kiken", "english": "danger" },
+  {
+    "kanji": "安全",
+    "kana": "あんぜん",
+    "romaji": "anzen",
+    "english": "safety"
+  },
+
+  {
+    "kanji": "文化",
+    "kana": "ぶんか",
+    "romaji": "bunka",
+    "english": "culture"
+  },
+  {
+    "kanji": "社会",
+    "kana": "しゃかい",
+    "romaji": "shakai",
+    "english": "society"
+  },
+  {
+    "kanji": "政治",
+    "kana": "せいじ",
+    "romaji": "seiji",
+    "english": "politics"
+  },
+  {
+    "kanji": "経済",
+    "kana": "けいざい",
+    "romaji": "keizai",
+    "english": "economy"
+  },
+  {
+    "kanji": "教育",
+    "kana": "きょういく",
+    "romaji": "kyouiku",
+    "english": "education"
+  },
+
+  {
+    "kanji": "技術",
+    "kana": "ぎじゅつ",
+    "romaji": "gijutsu",
+    "english": "technology; skill"
+  },
+  {
+    "kanji": "研究",
+    "kana": "けんきゅう",
+    "romaji": "kenkyuu",
+    "english": "research"
+  },
+  {
+    "kanji": "発展",
+    "kana": "はってん",
+    "romaji": "hatten",
+    "english": "development"
+  },
+  { "kanji": "変化", "kana": "へんか", "romaji": "henka", "english": "change" },
+  {
+    "kanji": "影響",
+    "kana": "えいきょう",
+    "romaji": "eikyou",
+    "english": "influence; effect"
+  },
+
+  {
+    "kanji": "情報",
+    "kana": "じょうほう",
+    "romaji": "jouhou",
+    "english": "information"
+  },
+  {
+    "kanji": "方法",
+    "kana": "ほうほう",
+    "romaji": "houhou",
+    "english": "method"
+  },
+  {
+    "kanji": "条件",
+    "kana": "じょうけん",
+    "romaji": "jouken",
+    "english": "condition"
+  },
+  {
+    "kanji": "内容",
+    "kana": "ないよう",
+    "romaji": "naiyou",
+    "english": "content"
+  },
+  {
+    "kanji": "目的",
+    "kana": "もくてき",
+    "romaji": "mokuteki",
+    "english": "purpose; goal"
+  },
+
+  {
+    "kanji": "問題",
+    "kana": "もんだい",
+    "romaji": "mondai",
+    "english": "problem; question"
+  },
+  {
+    "kanji": "解決",
+    "kana": "かいけつ",
+    "romaji": "kaiketsu",
+    "english": "solution; resolution"
+  },
+  {
+    "kanji": "説明",
+    "kana": "せつめい",
+    "romaji": "setsumei",
+    "english": "explanation"
+  },
+  {
+    "kanji": "意識",
+    "kana": "いしき",
+    "romaji": "ishiki",
+    "english": "awareness; consciousness"
+  },
+  {
+    "kanji": "印象",
+    "kana": "いんしょう",
+    "romaji": "inshou",
+    "english": "impression"
+  },
+
+  {
+    "kanji": "環境",
+    "kana": "かんきょう",
+    "romaji": "kankyou",
+    "english": "environment"
+  },
+  {
+    "kanji": "自然",
+    "kana": "しぜん",
+    "romaji": "shizen",
+    "english": "nature"
+  },
+  {
+    "kanji": "災害",
+    "kana": "さいがい",
+    "romaji": "saigai",
+    "english": "disaster"
+  },
+  {
+    "kanji": "資源",
+    "kana": "しげん",
+    "romaji": "shigen",
+    "english": "resource"
+  },
+  {
+    "kanji": "地球",
+    "kana": "ちきゅう",
+    "romaji": "chikyuu",
+    "english": "Earth"
+  },
+
+  {
+    "kanji": "法律",
+    "kana": "ほうりつ",
+    "romaji": "houritsu",
+    "english": "law"
+  },
+  {
+    "kanji": "制度",
+    "kana": "せいど",
+    "romaji": "seido",
+    "english": "system; institution"
+  },
+  {
+    "kanji": "責任",
+    "kana": "せきにん",
+    "romaji": "sekinin",
+    "english": "responsibility"
+  },
+  {
+    "kanji": "権利",
+    "kana": "けんり",
+    "romaji": "kenri",
+    "english": "right; privilege"
+  },
+  {
+    "kanji": "義務",
+    "kana": "ぎむ",
+    "romaji": "gimu",
+    "english": "duty; obligation"
+  },
+
+  {
+    "kanji": "増える",
+    "kana": "ふえる",
+    "romaji": "fueru",
+    "english": "to increase (intransitive)"
+  },
+  {
+    "kanji": "増やす",
+    "kana": "ふやす",
+    "romaji": "fuyasu",
+    "english": "to increase (transitive)"
+  },
+  {
+    "kanji": "減る",
+    "kana": "へる",
+    "romaji": "heru",
+    "english": "to decrease (intransitive)"
+  },
+  {
+    "kanji": "減らす",
+    "kana": "へらす",
+    "romaji": "herasu",
+    "english": "to decrease (transitive)"
+  },
+
+  {
+    "kanji": "続く",
+    "kana": "つづく",
+    "romaji": "tsuzuku",
+    "english": "to continue (intransitive)"
+  },
+  {
+    "kanji": "続ける",
+    "kana": "つづける",
+    "romaji": "tsuzukeru",
+    "english": "to continue (transitive)"
+  },
+  {
+    "kanji": "決まる",
+    "kana": "きまる",
+    "romaji": "kimaru",
+    "english": "to be decided"
+  },
+  {
+    "kanji": "決める",
+    "kana": "きめる",
+    "romaji": "kimeru",
+    "english": "to decide"
+  },
+
+  {
+    "kanji": "変わる",
+    "kana": "かわる",
+    "romaji": "kawaru",
+    "english": "to change (intransitive)"
+  },
+  {
+    "kanji": "変える",
+    "kana": "かえる",
+    "romaji": "kaeru",
+    "english": "to change (transitive)"
+  },
+
+  {
+    "kanji": "見つかる",
+    "kana": "みつかる",
+    "romaji": "mitsukaru",
+    "english": "to be found"
+  },
+  {
+    "kanji": "見つける",
+    "kana": "みつける",
+    "romaji": "mitsukeru",
+    "english": "to find"
+  },
+
+  {
+    "kanji": "間に合う",
+    "kana": "まにあう",
+    "romaji": "maniau",
+    "english": "to be in time"
+  },
+  {
+    "kanji": "遅れる",
+    "kana": "おくれる",
+    "romaji": "okureru",
+    "english": "to be late"
+  },
+
+  {
+    "kanji": "始まる",
+    "kana": "はじまる",
+    "romaji": "hajimaru",
+    "english": "to begin (intransitive)"
+  },
+  {
+    "kanji": "始める",
+    "kana": "はじめる",
+    "romaji": "hajimeru",
+    "english": "to begin (transitive)"
+  },
+  {
+    "kanji": "終わる",
+    "kana": "おわる",
+    "romaji": "owaru",
+    "english": "to end"
+  },
+
+  {
+    "kanji": "集まる",
+    "kana": "あつまる",
+    "romaji": "atsumaru",
+    "english": "to gather (intransitive)"
+  },
+  {
+    "kanji": "集める",
+    "kana": "あつめる",
+    "romaji": "atsumeru",
+    "english": "to collect"
+  },
+
+  {
+    "kanji": "助ける",
+    "kana": "たすける",
+    "romaji": "tasukeru",
+    "english": "to help; to save"
+  },
+  {
+    "kanji": "守る",
+    "kana": "まもる",
+    "romaji": "mamoru",
+    "english": "to protect; to follow (rules)"
+  },
+
+  {
+    "kanji": "比べる",
+    "kana": "くらべる",
+    "romaji": "kuraberu",
+    "english": "to compare"
+  },
+  {
+    "kanji": "選ぶ",
+    "kana": "えらぶ",
+    "romaji": "erabu",
+    "english": "to choose; to select"
+  },
+
+  {
+    "kanji": "伝える",
+    "kana": "つたえる",
+    "romaji": "tsutaeru",
+    "english": "to convey; to tell"
+  },
+  {
+    "kanji": "知らせる",
+    "kana": "しらせる",
+    "romaji": "shiraseru",
+    "english": "to inform"
+  },
+
+  {
+    "kanji": "間違える",
+    "kana": "まちがえる",
+    "romaji": "machigaeru",
+    "english": "to make a mistake"
+  },
+  {
+    "kanji": "直す",
+    "kana": "なおす",
+    "romaji": "naosu",
+    "english": "to fix; to correct"
+  },
+
+  {
+    "kanji": "向かう",
+    "kana": "むかう",
+    "romaji": "mukau",
+    "english": "to head toward"
+  },
+  {
+    "kanji": "戻る",
+    "kana": "もどる",
+    "romaji": "modoru",
+    "english": "to return"
+  },
+
+  {
+    "kanji": "起こる",
+    "kana": "おこる",
+    "romaji": "okoru",
+    "english": "to happen"
+  },
+  {
+    "kanji": "驚く",
+    "kana": "おどろく",
+    "romaji": "odoroku",
+    "english": "to be surprised"
+  },
+
+  {
+    "kanji": "感じる",
+    "kana": "かんじる",
+    "romaji": "kanjiru",
+    "english": "to feel"
+  },
+  {
+    "kanji": "考える",
+    "kana": "かんがえる",
+    "romaji": "kangaeru",
+    "english": "to think; to consider"
+  },
+
+  {
+    "kanji": "認める",
+    "kana": "みとめる",
+    "romaji": "mitomeru",
+    "english": "to recognize; to approve"
+  },
+  {
+    "kanji": "信じる",
+    "kana": "しんじる",
+    "romaji": "shinjiru",
+    "english": "to believe; to trust"
+  },
+
+  {
+    "kanji": "失う",
+    "kana": "うしなう",
+    "romaji": "ushinau",
+    "english": "to lose"
+  },
+  {
+    "kanji": "得る",
+    "kana": "える",
+    "romaji": "eru",
+    "english": "to obtain; to gain"
+  },
+
+  {
+    "kanji": "支払う",
+    "kana": "しはらう",
+    "romaji": "shiharau",
+    "english": "to pay"
+  },
+  {
+    "kanji": "利用する",
+    "kana": "りようする",
+    "romaji": "riyō suru",
+    "english": "to use; to utilize"
+  },
+
+  {
+    "kanji": "複雑",
+    "kana": "ふくざつ",
+    "romaji": "fukuzatsu",
+    "english": "complicated"
+  },
+  {
+    "kanji": "簡単",
+    "kana": "かんたん",
+    "romaji": "kantan",
+    "english": "simple; easy"
+  },
+  {
+    "kanji": "大切",
+    "kana": "たいせつ",
+    "romaji": "taisetsu",
+    "english": "important; precious"
+  },
+  {
+    "kanji": "必要",
+    "kana": "ひつよう",
+    "romaji": "hitsuyou",
+    "english": "necessary"
+  },
+  {
+    "kanji": "無理",
+    "kana": "むり",
+    "romaji": "muri",
+    "english": "impossible; unreasonable"
+  },
+
+  {
+    "kanji": "十分",
+    "kana": "じゅうぶん",
+    "romaji": "juubun",
+    "english": "enough; sufficient"
+  },
+  {
+    "kanji": "不便",
+    "kana": "ふべん",
+    "romaji": "fuben",
+    "english": "inconvenient"
+  },
+  {
+    "kanji": "正確",
+    "kana": "せいかく",
+    "romaji": "seikaku",
+    "english": "accurate; precise"
+  },
+  {
+    "kanji": "不正確",
+    "kana": "ふせいかく",
+    "romaji": "fuseikaku",
+    "english": "inaccurate"
+  },
+  {
+    "kanji": "確実",
+    "kana": "かくじつ",
+    "romaji": "kakujitsu",
+    "english": "certain; reliable"
+  },
+
+  {
+    "kanji": "危険",
+    "kana": "きけん",
+    "romaji": "kiken",
+    "english": "dangerous"
+  },
+  { "kanji": "安全", "kana": "あんぜん", "romaji": "anzen", "english": "safe" },
+  {
+    "kanji": "困難",
+    "kana": "こんなん",
+    "romaji": "konnan",
+    "english": "difficult; hard"
+  },
+  {
+    "kanji": "不安",
+    "kana": "ふあん",
+    "romaji": "fuan",
+    "english": "uneasy; anxious"
+  },
+  {
+    "kanji": "安心",
+    "kana": "あんしん",
+    "romaji": "anshin",
+    "english": "relief; peace of mind"
+  },
+
+  {
+    "kanji": "真剣",
+    "kana": "しんけん",
+    "romaji": "shinken",
+    "english": "serious"
+  },
+  {
+    "kanji": "積極的",
+    "kana": "せっきょくてき",
+    "romaji": "sekkyokuteki",
+    "english": "positive; proactive"
+  },
+  {
+    "kanji": "消極的",
+    "kana": "しょうきょくてき",
+    "romaji": "shoukyokuteki",
+    "english": "passive; negative"
+  },
+  {
+    "kanji": "一般的",
+    "kana": "いっぱんてき",
+    "romaji": "ippanteki",
+    "english": "general; common"
+  },
+  {
+    "kanji": "具体的",
+    "kana": "ぐたいてき",
+    "romaji": "gutaiteki",
+    "english": "concrete; specific"
+  },
+
+  {
+    "kanji": "特別",
+    "kana": "とくべつ",
+    "romaji": "tokubetsu",
+    "english": "special"
+  },
+  {
+    "kanji": "普通",
+    "kana": "ふつう",
+    "romaji": "futsuu",
+    "english": "normal; ordinary"
+  },
+  {
+    "kanji": "深刻",
+    "kana": "しんこく",
+    "romaji": "shinkoku",
+    "english": "serious; grave"
+  },
+  {
+    "kanji": "重大",
+    "kana": "じゅうだい",
+    "romaji": "juudai",
+    "english": "important; serious"
+  },
+  {
+    "kanji": "厳しい",
+    "kana": "きびしい",
+    "romaji": "kibishii",
+    "english": "strict; severe"
+  },
+
+  {
+    "kanji": "激しい",
+    "kana": "はげしい",
+    "romaji": "hageshii",
+    "english": "intense; violent"
+  },
+  {
+    "kanji": "細かい",
+    "kana": "こまかい",
+    "romaji": "komakai",
+    "english": "detailed; small"
+  },
+  {
+    "kanji": "鋭い",
+    "kana": "するどい",
+    "romaji": "surudoi",
+    "english": "sharp; keen"
+  },
+  {
+    "kanji": "鈍い",
+    "kana": "にぶい",
+    "romaji": "nibui",
+    "english": "dull; slow"
+  },
+  {
+    "kanji": "豊か",
+    "kana": "ゆたか",
+    "romaji": "yutaka",
+    "english": "rich; abundant"
+  },
+
+  {
+    "kanji": "貧しい",
+    "kana": "まずしい",
+    "romaji": "mazushii",
+    "english": "poor"
+  },
+  {
+    "kanji": "不思議",
+    "kana": "ふしぎ",
+    "romaji": "fushigi",
+    "english": "mysterious"
+  },
+  {
+    "kanji": "曖昧",
+    "kana": "あいまい",
+    "romaji": "aimai",
+    "english": "vague; ambiguous"
+  },
+  {
+    "kanji": "適当",
+    "kana": "てきとう",
+    "romaji": "tekitou",
+    "english": "appropriate; suitable"
+  },
+  {
+    "kanji": "無駄",
+    "kana": "むだ",
+    "romaji": "muda",
+    "english": "wasteful; useless"
+  },
+
+  {
+    "kanji": "受け取る",
+    "kana": "うけとる",
+    "romaji": "uketoru",
+    "english": "to receive"
+  },
+  {
+    "kanji": "断る",
+    "kana": "ことわる",
+    "romaji": "kotowaru",
+    "english": "to refuse; to decline"
+  },
+  {
+    "kanji": "引き受ける",
+    "kana": "ひきうける",
+    "romaji": "hikiukeru",
+    "english": "to accept; to take on"
+  },
+
+  {
+    "kanji": "達する",
+    "kana": "たっする",
+    "romaji": "tassuru",
+    "english": "to reach; to attain"
+  },
+  {
+    "kanji": "含む",
+    "kana": "ふくむ",
+    "romaji": "fukumu",
+    "english": "to include; to contain"
+  },
+  {
+    "kanji": "除く",
+    "kana": "のぞく",
+    "romaji": "nozoku",
+    "english": "to exclude; to remove"
+  },
+
+  {
+    "kanji": "起こす",
+    "kana": "おこす",
+    "romaji": "okosu",
+    "english": "to cause; to wake (someone)"
+  },
+  {
+    "kanji": "防ぐ",
+    "kana": "ふせぐ",
+    "romaji": "fusegu",
+    "english": "to prevent; to protect"
+  },
+  {
+    "kanji": "支える",
+    "kana": "ささえる",
+    "romaji": "sasaeru",
+    "english": "to support"
+  },
+
+  {
+    "kanji": "求める",
+    "kana": "もとめる",
+    "romaji": "motomeru",
+    "english": "to seek; to request"
+  },
+  {
+    "kanji": "避ける",
+    "kana": "さける",
+    "romaji": "sakeru",
+    "english": "to avoid"
+  },
+  {
+    "kanji": "保つ",
+    "kana": "たもつ",
+    "romaji": "tamotsu",
+    "english": "to maintain; to preserve"
+  },
+
+  {
+    "kanji": "認める",
+    "kana": "みとめる",
+    "romaji": "mitomeru",
+    "english": "to admit; to recognize"
+  },
+  {
+    "kanji": "疑う",
+    "kana": "うたがう",
+    "romaji": "utagau",
+    "english": "to doubt; to suspect"
+  },
+  {
+    "kanji": "許す",
+    "kana": "ゆるす",
+    "romaji": "yurusu",
+    "english": "to permit; to forgive"
+  },
+
+  {
+    "kanji": "耐える",
+    "kana": "たえる",
+    "romaji": "taeru",
+    "english": "to endure; to withstand"
+  },
+  {
+    "kanji": "乗り越える",
+    "kana": "のりこえる",
+    "romaji": "norikoeru",
+    "english": "to overcome"
+  },
+  {
+    "kanji": "回復する",
+    "kana": "かいふくする",
+    "romaji": "kaifuku suru",
+    "english": "to recover"
+  },
+
+  {
+    "kanji": "制限する",
+    "kana": "せいげんする",
+    "romaji": "seigen suru",
+    "english": "to restrict; to limit"
+  },
+  {
+    "kanji": "維持する",
+    "kana": "いじする",
+    "romaji": "iji suru",
+    "english": "to maintain"
+  },
+  {
+    "kanji": "改善する",
+    "kana": "かいぜんする",
+    "romaji": "kaizen suru",
+    "english": "to improve"
+  },
+
+  {
+    "kanji": "解釈する",
+    "kana": "かいしゃくする",
+    "romaji": "kaishaku suru",
+    "english": "to interpret"
+  },
+  {
+    "kanji": "予想する",
+    "kana": "よそうする",
+    "romaji": "yosou suru",
+    "english": "to predict; to expect"
+  },
+  {
+    "kanji": "確認する",
+    "kana": "かくにんする",
+    "romaji": "kakunin suru",
+    "english": "to confirm"
+  },
+
+  {
+    "kanji": "調整する",
+    "kana": "ちょうせいする",
+    "romaji": "chousei suru",
+    "english": "to adjust"
+  },
+  {
+    "kanji": "対応する",
+    "kana": "たいおうする",
+    "romaji": "taiou suru",
+    "english": "to deal with; to respond"
+  },
+  {
+    "kanji": "影響する",
+    "kana": "えいきょうする",
+    "romaji": "eikyou suru",
+    "english": "to influence; to affect"
+  },
+
+  {
+    "kanji": "立場",
+    "kana": "たちば",
+    "romaji": "tachiba",
+    "english": "position; standpoint"
+  },
+  {
+    "kanji": "役割",
+    "kana": "やくわり",
+    "romaji": "yakuwari",
+    "english": "role; function"
+  },
+  {
+    "kanji": "状況",
+    "kana": "じょうきょう",
+    "romaji": "joukyou",
+    "english": "situation; condition"
+  },
+  {
+    "kanji": "現象",
+    "kana": "げんしょう",
+    "romaji": "genshou",
+    "english": "phenomenon"
+  },
+  {
+    "kanji": "傾向",
+    "kana": "けいこう",
+    "romaji": "keikou",
+    "english": "tendency; trend"
+  },
+
+  {
+    "kanji": "範囲",
+    "kana": "はんい",
+    "romaji": "han’i",
+    "english": "range; scope"
+  },
+  {
+    "kanji": "程度",
+    "kana": "ていど",
+    "romaji": "teido",
+    "english": "degree; extent"
+  },
+  {
+    "kanji": "基準",
+    "kana": "きじゅん",
+    "romaji": "kijun",
+    "english": "standard; criterion"
+  },
+  {
+    "kanji": "条件",
+    "kana": "じょうけん",
+    "romaji": "jouken",
+    "english": "condition"
+  },
+  {
+    "kanji": "制限",
+    "kana": "せいげん",
+    "romaji": "seigen",
+    "english": "restriction; limit"
+  },
+
+  {
+    "kanji": "対策",
+    "kana": "たいさく",
+    "romaji": "taisaku",
+    "english": "measure; countermeasure"
+  },
+  {
+    "kanji": "方針",
+    "kana": "ほうしん",
+    "romaji": "houshin",
+    "english": "policy; guideline"
+  },
+  {
+    "kanji": "計画",
+    "kana": "けいかく",
+    "romaji": "keikaku",
+    "english": "plan; project"
+  },
+  {
+    "kanji": "戦略",
+    "kana": "せんりゃく",
+    "romaji": "senryaku",
+    "english": "strategy"
+  },
+  {
+    "kanji": "目標",
+    "kana": "もくひょう",
+    "romaji": "mokuhyou",
+    "english": "goal; target"
+  },
+
+  {
+    "kanji": "評価",
+    "kana": "ひょうか",
+    "romaji": "hyouka",
+    "english": "evaluation; assessment"
+  },
+  {
+    "kanji": "判断",
+    "kana": "はんだん",
+    "romaji": "handan",
+    "english": "judgment; decision"
+  },
+  {
+    "kanji": "選択",
+    "kana": "せんたく",
+    "romaji": "sentaku",
+    "english": "choice; selection"
+  },
+  {
+    "kanji": "提案",
+    "kana": "ていあん",
+    "romaji": "teian",
+    "english": "proposal; suggestion"
+  },
+  {
+    "kanji": "方策",
+    "kana": "ほうさく",
+    "romaji": "housaku",
+    "english": "policy; plan"
+  },
+
+  {
+    "kanji": "能力",
+    "kana": "のうりょく",
+    "romaji": "nouryoku",
+    "english": "ability; capacity"
+  },
+  {
+    "kanji": "知識",
+    "kana": "ちしき",
+    "romaji": "chishiki",
+    "english": "knowledge"
+  },
+  {
+    "kanji": "技能",
+    "kana": "ぎのう",
+    "romaji": "ginou",
+    "english": "skill; technique"
+  },
+  {
+    "kanji": "資格",
+    "kana": "しかく",
+    "romaji": "shikaku",
+    "english": "qualification; license"
+  },
+  {
+    "kanji": "経験者",
+    "kana": "けいけんしゃ",
+    "romaji": "keikensha",
+    "english": "experienced person"
+  },
+
+  {
+    "kanji": "態勢",
+    "kana": "たいせい",
+    "romaji": "taisei",
+    "english": "system; preparedness"
+  },
+  {
+    "kanji": "組織",
+    "kana": "そしき",
+    "romaji": "soshiki",
+    "english": "organization"
+  },
+  {
+    "kanji": "団体",
+    "kana": "だんたい",
+    "romaji": "dantai",
+    "english": "group; organization"
+  },
+  {
+    "kanji": "構造",
+    "kana": "こうぞう",
+    "romaji": "kouzou",
+    "english": "structure"
+  },
+  {
+    "kanji": "仕組み",
+    "kana": "しくみ",
+    "romaji": "shikumi",
+    "english": "mechanism; system"
+  },
+
+  {
+    "kanji": "背景",
+    "kana": "はいけい",
+    "romaji": "haikei",
+    "english": "background; context"
+  },
+  {
+    "kanji": "要因",
+    "kana": "よういん",
+    "romaji": "youin",
+    "english": "factor; cause"
+  },
+  {
+    "kanji": "根拠",
+    "kana": "こんきょ",
+    "romaji": "konkyo",
+    "english": "basis; grounds"
+  },
+  {
+    "kanji": "証拠",
+    "kana": "しょうこ",
+    "romaji": "shouko",
+    "english": "evidence; proof"
+  },
+  {
+    "kanji": "事実",
+    "kana": "じじつ",
+    "romaji": "jijitsu",
+    "english": "fact; truth"
+  },
+
+  {
+    "kanji": "影響力",
+    "kana": "えいきょうりょく",
+    "romaji": "eikyouryoku",
+    "english": "influence; power"
+  },
+  {
+    "kanji": "責任者",
+    "kana": "せきにんしゃ",
+    "romaji": "sekininsha",
+    "english": "person in charge"
+  },
+  {
+    "kanji": "関係者",
+    "kana": "かんけいしゃ",
+    "romaji": "kankeisha",
+    "english": "related parties"
+  },
+  {
+    "kanji": "当事者",
+    "kana": "とうじしゃ",
+    "romaji": "tousha",
+    "english": "person concerned"
+  },
+  {
+    "kanji": "第三者",
+    "kana": "だいさんしゃ",
+    "romaji": "daisansha",
+    "english": "third party"
+  }
+]
