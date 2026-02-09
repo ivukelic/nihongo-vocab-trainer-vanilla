@@ -4,6 +4,7 @@ let givenWord;
 let options = [];
 let points = 0;
 let data;
+let step = 1;
 
 async function loadData(level) {
   const response = await fetch(`/${level}.json`);
@@ -30,7 +31,7 @@ function render() {
   document.querySelector("#app").innerHTML = `
   <div id="app">
     <div class="buttonContainer">
-      <button data-level="nN">N5</button>
+      <button data-level="N5">N5</button>
       <button data-level="N4">N4</button>
       <button data-level="N3">N3</button>
       <button data-level="N2">N2</button>
@@ -48,7 +49,7 @@ document.querySelector("#app").addEventListener("click", (e) => {
   const index = button.dataset.index;
   const selectedOption = options[index];
 
-  if (selectedOption.kana === givenWord.kana) {
+  if (selectedOption === givenWord) {
     points++;
     document.getElementById(selectedOption.romaji).classList.add("correct");
   } else {
@@ -56,14 +57,21 @@ document.querySelector("#app").addEventListener("click", (e) => {
   }
 
   document.querySelectorAll("button").forEach((button) => {
-    button.disabled = true;
+    if (button.id === "next") {
+      if (step === 3) {
+        button.innerText = "Start again";
+      }
+      button.removeAttribute("disabled");
+    } else {
+      button.disabled = true;
+    }
   });
 });
 
-function loadQuiz(level) {
+function loadQuiz() {
   document.querySelector("#app").innerHTML = `
   <div id="app">
-  <div class="mainWord">${givenWord?.kana + level ?? ""}</div>
+  <div class="mainWord">${givenWord?.kana ?? ""}</div>
    <div class="optionContainer">
       ${options
         .map((option, index) => {
@@ -73,9 +81,24 @@ function loadQuiz(level) {
         })
         .join("")}
     </div>
+    <div>${step + " step, points: " + points}</div>
+    <button id="next" disabled>Next</button>
   </div>
 `;
 }
+
+//TODO: check if this can be handled better
+document.body.addEventListener("click", (e) => {
+  if (e.target.id === "next") {
+    loadNextStep();
+  }
+});
+
+document.body.addEventListener("click", (e) => {
+  if (e.target.innerHTML === "Start again") {
+    startAgain();
+  }
+});
 
 const Router = (() => {
   const routes = [];
@@ -153,7 +176,28 @@ async function main() {
 async function prepareQuiz(level) {
   await loadData(level);
   await loadOptions(data);
-  await loadQuiz(level);
+  await loadQuiz();
+}
+
+//TODO: refactor these two
+
+async function loadNextStep() {
+  step++;
+  options = [];
+  givenWord = "";
+  await loadOptions(data);
+  await loadQuiz();
+}
+
+async function startAgain() {
+  localStorage.setItem("Points from last round", points);
+
+  step = 1;
+  points = 0;
+  options = [];
+  givenWord = "";
+  await loadOptions(data);
+  await loadQuiz();
 }
 
 main();
