@@ -5,6 +5,7 @@ let options = [];
 let points = 0;
 let data;
 let step = 1;
+let lastRoundPoints;
 
 async function loadData(level) {
   const response = await fetch(`/${level}.json`);
@@ -84,6 +85,7 @@ function loadQuiz() {
         .join("")}
     </div>
     <div>${step + " step, points: " + points}</div>
+    <div>Points from the previous round: ${lastRoundPoints ?? "No points saved yet"}</div>
     <button id="next" disabled>Next</button>
     <button id="home">Back to start page</button>
   </div>
@@ -185,6 +187,7 @@ async function main() {
 async function prepareQuiz(level) {
   await loadData(level);
   await loadOptions(data);
+  await loadPreviousResult(level);
   await loadQuiz();
 }
 
@@ -200,7 +203,9 @@ async function startAgain() {
 
   step = 1;
   points = 0;
-  await reset();
+
+  await loadPreviousResult(level);
+  await reset(level);
 }
 
 async function saveToLocalStorage(level, points) {
@@ -223,6 +228,12 @@ async function reset() {
   givenWord = "";
   await loadOptions(data);
   await loadQuiz();
+}
+
+async function loadPreviousResult(level) {
+  const results = JSON.parse(localStorage.getItem("results")) || {};
+  const currentLevelResults = results[level] || [];
+  lastRoundPoints = currentLevelResults[currentLevelResults.length - 1]?.points;
 }
 
 main();
