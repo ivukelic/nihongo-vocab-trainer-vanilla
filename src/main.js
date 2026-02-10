@@ -62,6 +62,8 @@ document.querySelector("#app").addEventListener("click", (e) => {
         button.innerText = "Start again";
       }
       button.removeAttribute("disabled");
+    } else if (button.id === "home") {
+      button.disabled = false;
     } else {
       button.disabled = true;
     }
@@ -83,6 +85,7 @@ function loadQuiz() {
     </div>
     <div>${step + " step, points: " + points}</div>
     <button id="next" disabled>Next</button>
+    <button id="home">Back to start page</button>
   </div>
 `;
 }
@@ -91,6 +94,12 @@ function loadQuiz() {
 document.body.addEventListener("click", (e) => {
   if (e.target.id === "next") {
     loadNextStep();
+  } else if (e.target.id === "home") {
+    options = [];
+    givenWord = "";
+    points = 0;
+    step = 1;
+    Router.go("/");
   }
 });
 
@@ -179,21 +188,37 @@ async function prepareQuiz(level) {
   await loadQuiz();
 }
 
-//TODO: refactor these two
-
 async function loadNextStep() {
   step++;
-  options = [];
-  givenWord = "";
-  await loadOptions(data);
-  await loadQuiz();
+  await reset();
 }
 
 async function startAgain() {
-  localStorage.setItem("Points from last round", points);
+  const level = location.pathname.split("/").pop();
+
+  await saveToLocalStorage(level, points);
 
   step = 1;
   points = 0;
+  await reset();
+}
+
+async function saveToLocalStorage(level, points) {
+  const saved = JSON.parse(localStorage.getItem("results")) || {};
+
+  if (!saved[level]) {
+    saved[level] = [];
+  }
+
+  saved[level].push({
+    points,
+    date: new Date().toISOString(),
+  });
+
+  localStorage.setItem("results", JSON.stringify(saved));
+}
+
+async function reset() {
   options = [];
   givenWord = "";
   await loadOptions(data);
