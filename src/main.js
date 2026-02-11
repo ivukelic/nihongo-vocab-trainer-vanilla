@@ -1,11 +1,12 @@
 import "./style.css";
+import { Router } from "./router.js";
 
 let givenWord;
 let options = [];
 let points = 0;
 let data;
 let step = 1;
-let lastRoundPoints;
+let currentLevelResults;
 
 async function loadData(level) {
   const response = await fetch(`/${level}.json`);
@@ -85,15 +86,31 @@ function loadQuiz() {
         .join("")}
     </div>
     <div>${step + " step, points: " + points}</div>
-    <div>Points from the previous round: ${lastRoundPoints ?? "No points saved yet"}</div>
+    <div>Points from the previous round: ${currentLevelResults[currentLevelResults.length - 1]?.points ?? "No points saved yet"}</div>
     <button id="next" disabled>Next</button>
     <button id="home">Back to start page</button>
+    
+    <button id="open">dialog butt</button>
+
+    <dialog id="dialog">
+      <button id="close" type="button">Close</button>
+        <div>
+        ${currentLevelResults
+          .map((result, index) => {
+            return `<p data-index="${index}">
+            ${result.points} ${new Intl.DateTimeFormat("en-GB").format(new Date(result.date))}
+          </p>`;
+          })
+          .join("")}
+        </div>
+    </dialog>
   </div>
 `;
 }
 
 //TODO: check if this can be handled better
 document.body.addEventListener("click", (e) => {
+  console.log(e.target);
   if (e.target.id === "next") {
     loadNextStep();
   } else if (e.target.id === "home") {
@@ -102,6 +119,11 @@ document.body.addEventListener("click", (e) => {
     points = 0;
     step = 1;
     Router.go("/");
+  } else if (e.target.id === "open") {
+    const dialog = document.getElementById("dialog");
+    dialog.showModal();
+  } else if (e.target.id === "close" || e.target === dialog) {
+    dialog.close();
   }
 });
 
@@ -110,65 +132,6 @@ document.body.addEventListener("click", (e) => {
     startAgain();
   }
 });
-
-const Router = (() => {
-  const routes = [];
-
-  function add(path, handler) {
-    routes.push({ path, handler });
-  }
-
-  function match(pathname) {
-    for (const route of routes) {
-      const paramNames = [];
-      const regexPath = route.path.replace(/:([^/]+)/g, (_, name) => {
-        paramNames.push(name);
-        return "([^/]+)";
-      });
-
-      const match = pathname.match(new RegExp("^" + regexPath + "$"));
-
-      if (!match) continue;
-
-      const params = {};
-      paramNames.forEach((name, i) => {
-        params[name] = match[i + 1];
-      });
-
-      return { handler: route.handler, params };
-    }
-  }
-
-  function go(path) {
-    history.pushState({}, "", path);
-    resolve();
-  }
-
-  function resolve() {
-    const result = match(location.pathname);
-    if (result) {
-      result.handler(result.params);
-    } else {
-      console.warn("No route:", location.pathname);
-    }
-  }
-
-  function start() {
-    window.addEventListener("popstate", resolve);
-
-    document.addEventListener("click", (e) => {
-      const btn = e.target.closest("button[data-level]");
-      if (!btn) return;
-
-      const level = btn.dataset.level;
-      Router.go(`/myquiz/${level}`);
-    });
-
-    resolve();
-  }
-
-  return { add, go, start };
-})();
 
 async function main() {
   render();
@@ -232,8 +195,7 @@ async function reset() {
 
 async function loadPreviousResult(level) {
   const results = JSON.parse(localStorage.getItem("results")) || {};
-  const currentLevelResults = results[level] || [];
-  lastRoundPoints = currentLevelResults[currentLevelResults.length - 1]?.points;
+  currentLevelResults = results[level] || [];
 }
 
 main();
