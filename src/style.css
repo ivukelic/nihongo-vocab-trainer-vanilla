@@ -92,3 +92,20 @@ button:focus-visible {
   grid-template-columns: repeat(4, 1fr);
   column-gap: 10px;
 }
+
+dialog:open {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  align-items: self-end;
+}
+
+#close {
+}
+
+#resultContainer {
+  max-height: 300px;
+  overflow-y: scroll;
+  width: inherit;
+  margin: 16px 0;
+}

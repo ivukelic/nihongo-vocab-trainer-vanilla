@@ -93,8 +93,10 @@ function loadQuiz() {
     <button id="open">dialog butt</button>
 
     <dialog id="dialog">
-      <button id="close" type="button">Close</button>
-        <div>
+    <div><button id="close" type="button">Close</button>
+    </div>
+      
+      <div id="resultContainer">
         ${currentLevelResults
           .map((result, index) => {
             return `<p data-index="${index}">
@@ -102,7 +104,10 @@ function loadQuiz() {
           </p>`;
           })
           .join("")}
-        </div>
+      </div>
+      <div>
+      <button id="clear">Clear results</button>
+      </div>
     </dialog>
   </div>
 `;
@@ -110,7 +115,9 @@ function loadQuiz() {
 
 //TODO: check if this can be handled better
 document.body.addEventListener("click", (e) => {
-  console.log(e.target);
+  //TODO: handle clicking on backdrop to close dialog
+  const dialog = document.getElementById("dialog");
+
   if (e.target.id === "next") {
     loadNextStep();
   } else if (e.target.id === "home") {
@@ -120,10 +127,13 @@ document.body.addEventListener("click", (e) => {
     step = 1;
     Router.go("/");
   } else if (e.target.id === "open") {
-    const dialog = document.getElementById("dialog");
     dialog.showModal();
-  } else if (e.target.id === "close" || e.target === dialog) {
+  } else if (e.target.id === "close") {
     dialog.close();
+  } else if (e.target.id === "clear") {
+    const level = location.pathname.split("/").pop();
+    console.log(level);
+    localStorage.removeItem(level);
   }
 });
 
