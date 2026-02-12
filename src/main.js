@@ -7,6 +7,7 @@ let points = 0;
 let data;
 let step = 1;
 let currentLevelResults;
+let wrongAnswers = [];
 
 async function loadData(level) {
   const response = await fetch(`/${level}.json`);
@@ -55,6 +56,7 @@ document.querySelector("#app").addEventListener("click", (e) => {
     points++;
     document.getElementById(selectedOption.romaji).classList.add("correct");
   } else {
+    wrongAnswers.push(selectedOption);
     document.getElementById(selectedOption.romaji).classList.add("incorrect");
   }
 
@@ -125,6 +127,7 @@ document.body.addEventListener("click", (e) => {
     givenWord = "";
     points = 0;
     step = 1;
+    wrongAnswers = [];
     Router.go("/");
   } else if (e.target.id === "open") {
     dialog.showModal();
@@ -132,8 +135,8 @@ document.body.addEventListener("click", (e) => {
     dialog.close();
   } else if (e.target.id === "clear") {
     const level = location.pathname.split("/").pop();
-    console.log(level);
     localStorage.removeItem(level);
+    dialog.close();
   }
 });
 
@@ -172,28 +175,30 @@ async function loadNextStep() {
 async function startAgain() {
   const level = location.pathname.split("/").pop();
 
-  await saveToLocalStorage(level, points);
+  await saveToLocalStorage(level, points, wrongAnswers);
 
   step = 1;
   points = 0;
+  wrongAnswers = [];
 
   await loadPreviousResult(level);
   await reset(level);
 }
 
-async function saveToLocalStorage(level, points) {
-  const saved = JSON.parse(localStorage.getItem("results")) || {};
+async function saveToLocalStorage(level, points, wrongAnswers) {
+  const saved = JSON.parse(localStorage.getItem(level)) || [];
 
-  if (!saved[level]) {
-    saved[level] = [];
+  if (!saved) {
+    saved = [];
   }
 
-  saved[level].push({
+  saved.push({
     points,
+    wrongAnswers,
     date: new Date().toISOString(),
   });
 
-  localStorage.setItem("results", JSON.stringify(saved));
+  localStorage.setItem(level, JSON.stringify(saved));
 }
 
 async function reset() {
@@ -204,8 +209,9 @@ async function reset() {
 }
 
 async function loadPreviousResult(level) {
-  const results = JSON.parse(localStorage.getItem("results")) || {};
-  currentLevelResults = results[level] || [];
+  const results = JSON.parse(localStorage.getItem(level)) || [];
+  currentLevelResults = results || [];
+  console.log(currentLevelResults);
 }
 
 main();

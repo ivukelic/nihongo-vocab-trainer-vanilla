@@ -105,7 +105,7 @@ dialog:open {
 
 #resultContainer {
   max-height: 300px;
-  overflow-y: scroll;
+  overflow-y: auto;
   width: inherit;
   margin: 16px 0;
 }
