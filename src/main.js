@@ -8,6 +8,8 @@ let data;
 let step = 1;
 let currentLevelResults;
 let wrongAnswers = [];
+let givenWordValue;
+let optionsValue;
 
 async function loadData(level) {
   const response = await fetch(`/${level}.json`);
@@ -40,14 +42,119 @@ function render() {
       <button data-level="N2">N2</button>
       <button data-level="N1">N1</button>
     </div>
+    
+    <fieldset>
+      <legend>Select given word value:</legend>
+      <div>
+        <input type="radio" id="kanji" name="givenValue" value="kanji" checked />
+        <label for="kanji">kanji</label>
+      </div>
+
+      <div>
+        <input type="radio" id="kana" name="givenValue" value="kana" />
+        <label for="kana">kana</label>
+      </div>
+
+      <div>
+        <input type="radio" id="romaji" name="givenValue" value="romaji" />
+        <label for="romaji">romaji</label>
+      </div>
+
+        <div>
+        <input type="radio" id="english" name="givenValue" value="english" />
+        <label for="english">english</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Select options value:</legend>
+      <div>
+        <input type="radio" id="options-kanji" name="optionsValue" value="kanji" />
+        <label for="options-kanji">kanji</label>
+      </div>
+
+      <div>
+        <input type="radio" id="options-kana" name="optionsValue" value="kana" checked/>
+        <label for="options-kana">kana</label>
+      </div>
+
+      <div>
+        <input type="radio" id="options-romaji" name="optionsValue" value="romaji" />
+        <label for="options-romaji">romaji</label>
+      </div>
+
+        <div>
+        <input type="radio" id="options-english" name="optionsValue" value="english" />
+        <label for="options-english">english</label>
+      </div>
+    </fieldset>
   </div>
 `;
 }
+document.addEventListener("change", (e) => {
+  var givenValueChecked = document.querySelector(
+    'input[name="givenValue"]:checked',
+  );
+  var optionsValueChecked = document.querySelector(
+    'input[name="optionsValue"]:checked',
+  );
+
+  if (!givenValueChecked || !optionsValueChecked) {
+    return;
+  }
+
+  if (e.target.name === "givenValue") {
+    givenWordValue = givenValueChecked.value;
+  } else if (e.target.name === "optionsValue") {
+    optionsValue = optionsValueChecked.value;
+  }
+
+  console.log(givenWordValue, optionsValue);
+});
+
+//TODO: refactor and add inital load check
+document.addEventListener("change", function (event) {
+  if (!event.target.matches('input[type="radio"]')) return;
+
+  const givenSelected = document.querySelector(
+    'input[name="givenValue"]:checked',
+  );
+
+  const optionsSelected = document.querySelector(
+    'input[name="optionsValue"]:checked',
+  );
+
+  document
+    .querySelectorAll('input[name="givenValue"], input[name="optionsValue"]')
+    .forEach((radio) => (radio.disabled = false));
+
+  if (givenSelected) {
+    const matchInOptions = document.querySelector(
+      `input[name="optionsValue"][value="${givenSelected.value}"]`,
+    );
+
+    if (matchInOptions) {
+      matchInOptions.disabled = true;
+    }
+  }
+
+  if (optionsSelected) {
+    const matchInGiven = document.querySelector(
+      `input[name="givenValue"][value="${optionsSelected.value}"]`,
+    );
+
+    if (matchInGiven) {
+      matchInGiven.disabled = true;
+    }
+  }
+});
 
 document.querySelector("#app").addEventListener("click", (e) => {
   const button = e.target.closest("button[data-index]");
 
-  if (!button) return;
+  if (!button) {
+    return;
+  }
 
   const index = button.dataset.index;
   const selectedOption = options[index];
@@ -57,6 +164,7 @@ document.querySelector("#app").addEventListener("click", (e) => {
     document.getElementById(selectedOption.romaji).classList.add("correct");
   } else {
     wrongAnswers.push(selectedOption);
+
     document.getElementById(selectedOption.romaji).classList.add("incorrect");
   }
 
@@ -74,15 +182,16 @@ document.querySelector("#app").addEventListener("click", (e) => {
   });
 });
 
-function loadQuiz() {
+function loadQuiz(givenWordValue, optionsValue) {
+  console.log(givenWordValue, optionsValue);
   document.querySelector("#app").innerHTML = `
   <div id="app">
-  <div class="mainWord">${givenWord?.kana ?? ""}</div>
+  <div class="mainWord">${givenWord?.[givenWordValue] ?? ""}</div>
    <div class="optionContainer">
       ${options
         .map((option, index) => {
           return `<button data-index="${index}" id="${option.romaji}">
-            ${option.kana}
+            ${option[optionsValue]}
           </button>`;
         })
         .join("")}
@@ -95,10 +204,10 @@ function loadQuiz() {
     <button id="open">dialog butt</button>
 
     <dialog id="dialog">
-    <div><button id="close" type="button">Close</button>
+    <div>
+      <button id="close" type="button">Close</button>
     </div>
-      
-      <div id="resultContainer">
+    <div id="resultContainer">
         ${currentLevelResults
           .map((result, index) => {
             return `<p data-index="${index}">
@@ -106,10 +215,10 @@ function loadQuiz() {
           </p>`;
           })
           .join("")}
-      </div>
-      <div>
+    </div>
+    <div>
       <button id="clear">Clear results</button>
-      </div>
+    </div>
     </dialog>
   </div>
 `;
@@ -119,6 +228,10 @@ function loadQuiz() {
 document.body.addEventListener("click", (e) => {
   //TODO: handle clicking on backdrop to close dialog
   const dialog = document.getElementById("dialog");
+
+  if (!dialog) {
+    return;
+  }
 
   if (e.target.id === "next") {
     loadNextStep();
@@ -154,17 +267,17 @@ async function main() {
   });
 
   Router.add("/myquiz/:level", ({ level }) => {
-    prepareQuiz(level);
+    prepareQuiz(level, givenWordValue, optionsValue);
   });
 
   Router.start();
 }
 
-async function prepareQuiz(level) {
+async function prepareQuiz(level, givenWordValue, optionsValue) {
   await loadData(level);
   await loadOptions(data);
   await loadPreviousResult(level);
-  await loadQuiz();
+  await loadQuiz(givenWordValue, optionsValue);
 }
 
 async function loadNextStep() {
@@ -205,7 +318,7 @@ async function reset() {
   options = [];
   givenWord = "";
   await loadOptions(data);
-  await loadQuiz();
+  await loadQuiz(givenWordValue, optionsValue);
 }
 
 async function loadPreviousResult(level) {
