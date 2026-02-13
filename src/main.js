@@ -44,51 +44,53 @@ function render() {
       <button data-level="N1">N1</button>
     </div>
     
-    <fieldset>
-      <legend>Select given word value:</legend>
-      <div>
-        <input type="radio" id="kanji" name="givenValue" value="kanji" checked />
-        <label for="kanji">kanji</label>
-      </div>
-
-      <div>
-        <input type="radio" id="kana" name="givenValue" value="kana" />
-        <label for="kana">kana</label>
-      </div>
-
-      <div>
-        <input type="radio" id="romaji" name="givenValue" value="romaji" />
-        <label for="romaji">romaji</label>
-      </div>
+    <div class="fieldsetContainer">
+      <fieldset>
+        <legend>Select given word value:</legend>
+        <div>
+          <input type="radio" id="kanji" name="givenValue" value="kanji" checked />
+          <label for="kanji">kanji</label>
+        </div>
 
         <div>
-        <input type="radio" id="english" name="givenValue" value="english" />
-        <label for="english">english</label>
-      </div>
-    </fieldset>
-
-    <fieldset>
-      <legend>Select options value:</legend>
-      <div>
-        <input type="radio" id="options-kanji" name="optionsValue" value="kanji" />
-        <label for="options-kanji">kanji</label>
-      </div>
-
-      <div>
-        <input type="radio" id="options-kana" name="optionsValue" value="kana" checked/>
-        <label for="options-kana">kana</label>
-      </div>
-
-      <div>
-        <input type="radio" id="options-romaji" name="optionsValue" value="romaji" />
-        <label for="options-romaji">romaji</label>
-      </div>
+          <input type="radio" id="kana" name="givenValue" value="kana" />
+          <label for="kana">kana</label>
+        </div>
 
         <div>
-        <input type="radio" id="options-english" name="optionsValue" value="english" />
-        <label for="options-english">english</label>
-      </div>
-    </fieldset>
+          <input type="radio" id="romaji" name="givenValue" value="romaji" />
+          <label for="romaji">romaji</label>
+        </div>
+
+          <div>
+          <input type="radio" id="english" name="givenValue" value="english" />
+          <label for="english">english</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Select options value:</legend>
+        <div>
+          <input type="radio" id="options-kanji" name="optionsValue" value="kanji" />
+          <label for="options-kanji">kanji</label>
+        </div>
+
+        <div>
+          <input type="radio" id="options-kana" name="optionsValue" value="kana" checked/>
+          <label for="options-kana">kana</label>
+        </div>
+
+        <div>
+          <input type="radio" id="options-romaji" name="optionsValue" value="romaji" />
+          <label for="options-romaji">romaji</label>
+        </div>
+
+          <div>
+          <input type="radio" id="options-english" name="optionsValue" value="english" />
+          <label for="options-english">english</label>
+        </div>
+      </fieldset>
+    </div>
   </div>
 `;
 }
@@ -108,6 +110,25 @@ document.addEventListener("change", (e) => {
   if (e.target.name === "givenValue") {
     givenWordValue = givenValueChecked.value;
   } else if (e.target.name === "optionsValue") {
+    optionsValue = optionsValueChecked.value;
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const givenValueChecked = document.querySelector(
+    'input[name="givenValue"]:checked',
+  );
+
+  const optionsValueChecked = document.querySelector(
+    'input[name="optionsValue"]:checked',
+  );
+
+  if (!givenValueChecked || !optionsValueChecked) {
+    return;
+  }
+
+  if (givenValueChecked && optionsValueChecked) {
+    givenWordValue = givenValueChecked.value;
     optionsValue = optionsValueChecked.value;
   }
 });

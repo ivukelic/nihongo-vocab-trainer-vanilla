@@ -109,3 +109,22 @@ dialog:open {
   width: inherit;
   margin: 16px 0;
 }
+
+input[type="radio"]:disabled + label {
+  cursor: not-allowed;
+  opacity: 0.2;
+  color: gray;
+}
+
+input[type="radio"] {
+  accent-color: #9749d6;
+}
+
+fieldset {
+  border-radius: 8px;
+  margin: 6px;
+}
+
+.fieldsetContainer {
+  display: flex;
+}
