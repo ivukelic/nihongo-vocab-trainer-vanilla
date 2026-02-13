@@ -1,5 +1,6 @@
 import "./style.css";
 import { Router } from "./router.js";
+import { DisableRadioButtons } from "./disableRadioButtons.js";
 
 let givenWord;
 let options = [];
@@ -91,6 +92,7 @@ function render() {
   </div>
 `;
 }
+
 document.addEventListener("change", (e) => {
   var givenValueChecked = document.querySelector(
     'input[name="givenValue"]:checked',
@@ -108,45 +110,14 @@ document.addEventListener("change", (e) => {
   } else if (e.target.name === "optionsValue") {
     optionsValue = optionsValueChecked.value;
   }
-
-  console.log(givenWordValue, optionsValue);
 });
 
-//TODO: refactor and add inital load check
-document.addEventListener("change", function (event) {
-  if (!event.target.matches('input[type="radio"]')) return;
+document.addEventListener("change", function () {
+  DisableRadioButtons();
+});
 
-  const givenSelected = document.querySelector(
-    'input[name="givenValue"]:checked',
-  );
-
-  const optionsSelected = document.querySelector(
-    'input[name="optionsValue"]:checked',
-  );
-
-  document
-    .querySelectorAll('input[name="givenValue"], input[name="optionsValue"]')
-    .forEach((radio) => (radio.disabled = false));
-
-  if (givenSelected) {
-    const matchInOptions = document.querySelector(
-      `input[name="optionsValue"][value="${givenSelected.value}"]`,
-    );
-
-    if (matchInOptions) {
-      matchInOptions.disabled = true;
-    }
-  }
-
-  if (optionsSelected) {
-    const matchInGiven = document.querySelector(
-      `input[name="givenValue"][value="${optionsSelected.value}"]`,
-    );
-
-    if (matchInGiven) {
-      matchInGiven.disabled = true;
-    }
-  }
+document.addEventListener("DOMContentLoaded", function () {
+  DisableRadioButtons();
 });
 
 document.querySelector("#app").addEventListener("click", (e) => {
