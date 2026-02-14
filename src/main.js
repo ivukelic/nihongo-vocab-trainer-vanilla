@@ -163,9 +163,14 @@ document.querySelector("#app").addEventListener("click", (e) => {
     document.getElementById(yourAnswer.romaji).classList.add("correct");
   } else {
     wrongAnswers.push(yourAnswer);
-
     document.getElementById(yourAnswer.romaji).classList.add("incorrect");
   }
+
+  document.getElementById("yourAnswerEnglish").textContent =
+    yourAnswer?.english;
+  document.getElementById("yourAnswerRomaji").textContent = yourAnswer?.romaji;
+  document.getElementById("yourAnswerKana").textContent = yourAnswer?.kana;
+  document.getElementById("yourAnswerKanji").textContent = yourAnswer?.kanji;
 
   document.getElementById("answerInfo").classList.remove("hidden");
   document.getElementById("answerInfo").classList.add("visible");
@@ -206,10 +211,10 @@ function loadQuiz(givenWordValue, optionsValue) {
   
   <div class="yourAnswer">
     <div class="answerHeader">Your answer</div>
-    <div>English: ${yourAnswer?.english}</div>
-    <div>Romaji: ${yourAnswer?.romaji}</div>
-    <div>Kana: ${yourAnswer?.kana}</div>
-    <div>Kanji: ${yourAnswer?.kanji}</div>
+    <div>English: <span id="yourAnswerEnglish"></span></div>
+    <div>Romaji: <span id="yourAnswerRomaji"></span></div>
+    <div>Kana: <span id="yourAnswerKana"></span></div>
+    <div>Kanji: <span id="yourAnswerKanji"></span></div>
   </div>
 
 </div>  
@@ -338,6 +343,7 @@ async function saveToLocalStorage(level, points, wrongAnswers) {
 }
 
 async function reset() {
+  yourAnswer = "";
   options = [];
   givenWord = "";
   await loadOptions(data);
