@@ -130,6 +130,8 @@ fieldset {
 }
 
 .answerInfo {
+  display: flex;
+  justify-content: space-evenly;
   transition:
     visibility 0s linear 0.7s,
     opacity 0.7s ease-in-out;
@@ -143,4 +145,21 @@ fieldset {
 .answerInfo.hidden {
   opacity: 0;
   visibility: hidden;
+}
+
+.mainWord {
+  font-size: xxx-large;
+  margin-bottom: 32px;
+}
+
+.correctAnswer,
+.yourAnswer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.answerHeader {
+  align-self: normal;
+  font-weight: 700;
 }

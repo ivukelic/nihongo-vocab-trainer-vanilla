@@ -11,6 +11,7 @@ let currentLevelResults;
 let wrongAnswers = [];
 let givenWordValue;
 let optionsValue;
+let yourAnswer;
 
 // Functions called during initalization
 
@@ -155,15 +156,15 @@ document.querySelector("#app").addEventListener("click", (e) => {
   }
 
   const index = button.dataset.index;
-  const selectedOption = options[index];
+  yourAnswer = options[index];
 
-  if (selectedOption === givenWord) {
+  if (yourAnswer === givenWord) {
     points++;
-    document.getElementById(selectedOption.romaji).classList.add("correct");
+    document.getElementById(yourAnswer.romaji).classList.add("correct");
   } else {
-    wrongAnswers.push(selectedOption);
+    wrongAnswers.push(yourAnswer);
 
-    document.getElementById(selectedOption.romaji).classList.add("incorrect");
+    document.getElementById(yourAnswer.romaji).classList.add("incorrect");
   }
 
   document.getElementById("answerInfo").classList.remove("hidden");
@@ -190,13 +191,27 @@ document.querySelector("#app").addEventListener("click", (e) => {
 });
 
 function loadQuiz(givenWordValue, optionsValue) {
-  console.log(givenWordValue, optionsValue);
   document.querySelector("#app").innerHTML = `
   <div id="app">
   <div class="mainWord">${givenWord?.[givenWordValue] ?? ""}</div>
 
 <div id="answerInfo" class="answerInfo hidden">
-  goatwickgoatygoat
+  <div class="correctAnswer">
+    <div class="answerHeader">Correct answer</div>
+    <div>English: ${givenWord.english}</div>
+    <div>Romaji: ${givenWord.romaji}</div>
+    <div>Kana: ${givenWord.kana}</div>
+    <div>Kanji: ${givenWord.kanji}</div>
+  </div>
+  
+  <div class="yourAnswer">
+    <div class="answerHeader">Your answer</div>
+    <div>English: ${yourAnswer?.english}</div>
+    <div>Romaji: ${yourAnswer?.romaji}</div>
+    <div>Kana: ${yourAnswer?.kana}</div>
+    <div>Kanji: ${yourAnswer?.kanji}</div>
+  </div>
+
 </div>  
 
   <div class="optionContainer">
@@ -332,7 +347,6 @@ async function reset() {
 async function loadPreviousResult(level) {
   const results = JSON.parse(localStorage.getItem(level)) || [];
   currentLevelResults = results || [];
-  console.log(currentLevelResults);
 }
 
 main();
