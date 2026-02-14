@@ -12,6 +12,8 @@ let wrongAnswers = [];
 let givenWordValue;
 let optionsValue;
 
+// Functions called during initalization
+
 async function loadData(level) {
   const response = await fetch(`/${level}.json`);
   data = await response.json();
@@ -95,6 +97,8 @@ function render() {
 `;
 }
 
+// Handling radio buttons/value selection
+
 document.addEventListener("change", (e) => {
   var givenValueChecked = document.querySelector(
     'input[name="givenValue"]:checked',
@@ -141,6 +145,8 @@ document.addEventListener("DOMContentLoaded", function () {
   DisableRadioButtons();
 });
 
+// Handling selecting answer
+
 document.querySelector("#app").addEventListener("click", (e) => {
   const button = e.target.closest("button[data-index]");
 
@@ -160,6 +166,9 @@ document.querySelector("#app").addEventListener("click", (e) => {
     document.getElementById(selectedOption.romaji).classList.add("incorrect");
   }
 
+  document.getElementById("answerInfo").classList.remove("hidden");
+  document.getElementById("answerInfo").classList.add("visible");
+
   document.querySelectorAll("button").forEach((button) => {
     if (button.id === "next") {
       if (step === 3) {
@@ -172,6 +181,12 @@ document.querySelector("#app").addEventListener("click", (e) => {
       button.disabled = true;
     }
   });
+
+  document.body.addEventListener("click", (e) => {
+    if (e.target.innerHTML === "Start again") {
+      startAgain();
+    }
+  });
 });
 
 function loadQuiz(givenWordValue, optionsValue) {
@@ -179,7 +194,12 @@ function loadQuiz(givenWordValue, optionsValue) {
   document.querySelector("#app").innerHTML = `
   <div id="app">
   <div class="mainWord">${givenWord?.[givenWordValue] ?? ""}</div>
-   <div class="optionContainer">
+
+<div id="answerInfo" class="answerInfo hidden">
+  goatwickgoatygoat
+</div>  
+
+  <div class="optionContainer">
       ${options
         .map((option, index) => {
           return `<button data-index="${index}" id="${option.romaji}">
@@ -245,12 +265,6 @@ document.body.addEventListener("click", (e) => {
   }
 });
 
-document.body.addEventListener("click", (e) => {
-  if (e.target.innerHTML === "Start again") {
-    startAgain();
-  }
-});
-
 async function main() {
   render();
 
@@ -264,6 +278,8 @@ async function main() {
 
   Router.start();
 }
+
+// Quiz related functions
 
 async function prepareQuiz(level, givenWordValue, optionsValue) {
   await loadData(level);

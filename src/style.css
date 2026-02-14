@@ -128,3 +128,19 @@ fieldset {
 .fieldsetContainer {
   display: flex;
 }
+
+.answerInfo {
+  transition:
+    visibility 0s linear 0.7s,
+    opacity 0.7s ease-in-out;
+}
+
+.answerInfo.visible {
+  transition-delay: 0s;
+  visibility: visible;
+  opacity: 1;
+}
+.answerInfo.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
