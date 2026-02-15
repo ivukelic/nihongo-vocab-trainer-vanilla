@@ -1,6 +1,7 @@
 import "./style.css";
 import { Router } from "./router.js";
 import { DisableRadioButtons } from "./disableRadioButtons.js";
+import { inject } from "@vercel/analytics";
 
 let givenWord;
 let options = [];
@@ -114,8 +115,10 @@ document.addEventListener("change", (e) => {
 
   if (e.target.name === "givenValue") {
     givenWordValue = givenValueChecked.value;
+    localStorage.setItem("givenWordValue", givenWordValue);
   } else if (e.target.name === "optionsValue") {
     optionsValue = optionsValueChecked.value;
+    localStorage.setItem("optionsValue", optionsValue);
   }
 });
 
@@ -133,9 +136,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (givenValueChecked && optionsValueChecked) {
-    givenWordValue = givenValueChecked.value;
-    optionsValue = optionsValueChecked.value;
+    givenWordValue =
+      localStorage.getItem("givenWordValue") || givenValueChecked.value;
+    optionsValue =
+      localStorage.getItem("optionsValue") || optionsValueChecked.value;
   }
+
+  // document.querySelector(
+  //   `input[value="${localStorage.getItem("givenWordValue")}"]`,
+  // ).checked = true;
+  // document.querySelector(
+  //   `input[value="${localStorage.getItem("optionsValue")}"]`,
+  // ).checked = true;
 });
 
 document.addEventListener("change", function () {
@@ -286,6 +298,7 @@ document.body.addEventListener("click", (e) => {
 });
 
 async function main() {
+  inject();
   render();
 
   Router.add("/", () => {
@@ -302,6 +315,11 @@ async function main() {
 // Quiz related functions
 
 async function prepareQuiz(level, givenWordValue, optionsValue) {
+  if (givenWordValue === undefined && optionsValue === undefined) {
+    givenWordValue = localStorage.getItem("givenWordValue");
+    optionsValue = localStorage.getItem("optionsValue");
+  }
+
   await loadData(level);
   await loadOptions(data);
   await loadPreviousResult(level);
