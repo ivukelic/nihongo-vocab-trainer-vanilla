@@ -345,7 +345,7 @@ async function startAgain() {
 }
 
 async function saveToLocalStorage(level, points, wrongAnswers) {
-  const saved = JSON.parse(localStorage.getItem(level)) || [];
+  let saved = JSON.parse(localStorage.getItem(level)) || [];
 
   if (!saved) {
     saved = [];
