@@ -199,12 +199,12 @@ document.querySelector("#app").addEventListener("click", (e) => {
       button.disabled = true;
     }
   });
+});
 
-  document.body.addEventListener("click", (e) => {
-    if (e.target.innerHTML === "Start again") {
-      startAgain();
-    }
-  });
+document.body.addEventListener("click", (e) => {
+  if (e.target.innerHTML === "Start again") {
+    startAgain();
+  }
 });
 
 function loadQuiz(givenWordValue, optionsValue) {
@@ -240,13 +240,20 @@ function loadQuiz(givenWordValue, optionsValue) {
         })
         .join("")}
     </div>
-    <div>${step + " step, points: " + points}</div>
-    <div>Points from the previous round: ${currentLevelResults[currentLevelResults.length - 1]?.points ?? "No points saved yet"}</div>
-    <button id="next" disabled>Next</button>
-    <button id="home">Back to start page</button>
     
-    <button id="open">dialog butt</button>
-
+    <div class="infoContainer">
+      <div>${step} step</div>
+      <div>points: ${points}</div>
+    </div>
+    
+    <div class="prevPoints">Points from the previous round: ${currentLevelResults[currentLevelResults.length - 1]?.points ?? "No points saved yet"}</div>
+    
+    <div class="bottomButtonContainer">
+      <button id="next" disabled>Next</button>
+      <button id="home">Back to start page</button>
+      <button id="open">dialog butt</button>
+    </div>
+    
     <dialog id="dialog">
     <div>
       <button id="close" type="button">Close</button>
@@ -261,7 +268,7 @@ function loadQuiz(givenWordValue, optionsValue) {
           .join("")}
     </div>
     <div>
-      <button id="clear">Clear results</button>
+      <button id="clear">Show score</button>
     </div>
     </dialog>
   </div>

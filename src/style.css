@@ -87,7 +87,7 @@ button:focus-visible {
 }
 
 .optionContainer {
-  padding-top: 32px;
+  margin: 32px 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 10px;
@@ -127,6 +127,7 @@ fieldset {
 
 .fieldsetContainer {
   display: flex;
+  margin-top: 32px;
 }
 
 .answerInfo {
@@ -162,4 +163,21 @@ fieldset {
 .answerHeader {
   align-self: normal;
   font-weight: 700;
+}
+
+.bottomButtonContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 16px;
+}
+
+.infoContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 32px;
+  font-size: large;
+}
+
+.prevPoints {
+  margin-bottom: 32px;
 }
