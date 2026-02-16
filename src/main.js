@@ -141,13 +141,6 @@ document.addEventListener("DOMContentLoaded", () => {
     optionsValue =
       localStorage.getItem("optionsValue") || optionsValueChecked.value;
   }
-
-  // document.querySelector(
-  //   `input[value="${localStorage.getItem("givenWordValue")}"]`,
-  // ).checked = true;
-  // document.querySelector(
-  //   `input[value="${localStorage.getItem("optionsValue")}"]`,
-  // ).checked = true;
 });
 
 document.addEventListener("change", function () {
@@ -251,7 +244,7 @@ function loadQuiz(givenWordValue, optionsValue) {
     <div class="bottomButtonContainer">
       <button id="next" disabled>Next</button>
       <button id="home">Back to start page</button>
-      <button id="open">dialog butt</button>
+      <button id="open">See previous scores</button>
     </div>
     
     <dialog id="dialog">
@@ -310,6 +303,7 @@ async function main() {
 
   Router.add("/", () => {
     render();
+    DisableRadioButtons();
   });
 
   Router.add("/myquiz/:level", ({ level }) => {

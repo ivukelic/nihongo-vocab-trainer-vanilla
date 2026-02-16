@@ -91,6 +91,10 @@ button:focus-visible {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 10px;
+
+  button {
+    max-width: 150px;
+  }
 }
 
 dialog:open {
