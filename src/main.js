@@ -261,7 +261,7 @@ function loadQuiz(givenWordValue, optionsValue) {
           .join("")}
     </div>
     <div>
-      <button id="clear">Show score</button>
+      <button id="clear">Clear score</button>
     </div>
     </dialog>
   </div>

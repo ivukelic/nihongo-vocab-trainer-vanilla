@@ -102,6 +102,8 @@ dialog:open {
   flex-direction: column;
   width: 600px;
   align-items: self-end;
+  border: unset;
+  border-radius: 12px;
 }
 
 #close {
