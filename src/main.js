@@ -343,7 +343,7 @@ async function startAgain() {
 
   await saveToLocalStorage(level, points, wrongAnswers);
 
-  step = 1;
+  step = 0;
   points = 0;
   wrongAnswers = [];
 
@@ -368,6 +368,7 @@ async function saveToLocalStorage(level, points, wrongAnswers) {
 }
 
 async function reset() {
+  console.log(step);
   yourAnswer = "";
   options = [];
   givenWord = "";
