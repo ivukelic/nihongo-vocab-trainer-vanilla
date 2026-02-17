@@ -166,19 +166,26 @@ document.querySelector("#app").addEventListener("click", (e) => {
   if (yourAnswer === givenWord) {
     points++;
     document.getElementById(yourAnswer.romaji).classList.add("correct");
+
+    document.getElementById("answerInfo").classList.remove("hidden");
+    document.getElementById("answerInfo").classList.add("visible");
   } else {
     wrongAnswers.push(yourAnswer);
+
     document.getElementById(yourAnswer.romaji).classList.add("incorrect");
+
+    document.getElementById("answerInfo").classList.remove("hidden");
+    document.getElementById("answerInfo").classList.add("visible");
+
+    document.getElementById("yourAnswer").classList.remove("correctOnly");
+
+    document.getElementById("yourAnswerEnglish").textContent =
+      yourAnswer?.english;
+    document.getElementById("yourAnswerRomaji").textContent =
+      yourAnswer?.romaji;
+    document.getElementById("yourAnswerKana").textContent = yourAnswer?.kana;
+    document.getElementById("yourAnswerKanji").textContent = yourAnswer?.kanji;
   }
-
-  document.getElementById("yourAnswerEnglish").textContent =
-    yourAnswer?.english;
-  document.getElementById("yourAnswerRomaji").textContent = yourAnswer?.romaji;
-  document.getElementById("yourAnswerKana").textContent = yourAnswer?.kana;
-  document.getElementById("yourAnswerKanji").textContent = yourAnswer?.kanji;
-
-  document.getElementById("answerInfo").classList.remove("hidden");
-  document.getElementById("answerInfo").classList.add("visible");
 
   document.querySelectorAll("button").forEach((button) => {
     if (button.id === "next") {
@@ -213,8 +220,7 @@ function loadQuiz(givenWordValue, optionsValue) {
     <div>Kana: ${givenWord.kana}</div>
     <div>Kanji: ${givenWord.kanji}</div>
   </div>
-  
-  <div class="yourAnswer">
+  <div id="yourAnswer" class="yourAnswer correctOnly">
     <div class="answerHeader">Your answer</div>
     <div>English: <span id="yourAnswerEnglish"></span></div>
     <div>Romaji: <span id="yourAnswerRomaji"></span></div>
