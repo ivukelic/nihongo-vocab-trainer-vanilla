@@ -39,7 +39,7 @@ async function loadOptions(data) {
 
 function render() {
   document.querySelector("#app").innerHTML = `
-  <div id="app">
+  <div>
     <div class="buttonContainer">
       <button data-level="N5">N5</button>
       <button data-level="N4">N4</button>
@@ -209,7 +209,7 @@ document.body.addEventListener("click", (e) => {
 
 function loadQuiz(givenWordValue, optionsValue) {
   document.querySelector("#app").innerHTML = `
-  <div id="app">
+  <div>
   <div class="mainWord">${givenWord?.[givenWordValue] ?? ""}</div>
 
 <div id="answerInfo" class="answerInfo hidden">
@@ -299,6 +299,9 @@ document.body.addEventListener("click", (e) => {
   } else if (e.target.id === "clear") {
     const level = location.pathname.split("/").pop();
     localStorage.removeItem(level);
+    document.getElementById("resultContainer").textContent = "Nothing here yet";
+
+    resultContainer;
     dialog.close();
   }
 });

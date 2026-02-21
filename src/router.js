@@ -27,14 +27,20 @@ export const Router = (() => {
   }
 
   function go(path) {
-    history.pushState({}, "", path);
-    resolve();
+    document.body.classList.add("fade-out");
+
+    setTimeout(() => {
+      history.pushState({}, "", path);
+      resolve();
+    }, 300);
   }
 
   function resolve() {
     const result = match(location.pathname);
     if (result) {
       result.handler(result.params);
+      void document.body.offsetWidth;
+      document.body.classList.remove("fade-out");
     } else {
       console.warn("No route:", location.pathname);
     }
